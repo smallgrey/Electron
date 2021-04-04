@@ -1,0 +1,19 @@
+<scroll-view scroll-y="true" scroll-with-animation="{{true}}" class="container">
+	<!-- 首页
+	 <button open-type='getUserInfo' bindgetuserinfo='getuserinfo' class='sz_btn' type='primary' /> -->
+	<view>
+		<view class="chat-list">
+			<block wx:for="{{userList}}" wx:for-item="chat" wx:for-index="index" wx:key="index">
+				<view class="chat">
+					<view  class="row" bindtap="toChat"  data-user="{{chat}}">
+						<view class="left"><image src="{{chat.face}}"></image></view>
+						<view class="right">
+							<view class="username">{{chat.username}}</view>
+						</view>
+					</view>
+				</view>
+			</block>
+		</view>
+	</view>
+</scroll-view>
+

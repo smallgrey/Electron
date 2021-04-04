@@ -1,0 +1,16 @@
+{
+  "pages": [
+	"pages/index/index",
+	"pages/chat/chat",
+	"pages/contacts/index"
+  ],
+  "window": {
+    "backgroundColor": "#DCE2F1",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#DCE2F1",
+    "navigationBarTitleText": "医学人才招聘小程序",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

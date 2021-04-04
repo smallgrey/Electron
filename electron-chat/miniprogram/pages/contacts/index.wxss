@@ -1,0 +1,53 @@
+@charset "UTF-8";
+.container{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: #EEE;
+}
+
+page {
+  background-color: transparent;
+}
+.chat-list {
+  width: 94%;
+  padding: 0 3%;
+}
+.chat-list .chat {
+  width: 100%;
+  height: 100rpx;
+  padding: 20rpx 0;
+  border-bottom: solid 1rpx #eaeaea;
+}
+.chat-list .chat .row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  align-items: center;
+}
+.chat-list .chat .row .left {
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  width: 100rpx;
+  height: 100rpx;
+}
+.chat-list .chat .row .left image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 20rpx;
+}
+.chat-list .chat .row .right {
+  -webkit-flex-shrink: 1;
+  flex-shrink: 1;
+  width: 98%;
+  padding-left: 2%;
+}
+
+.chat-list .chat .row .right .username{
+	font-size: 26rpx;
+}
+
+

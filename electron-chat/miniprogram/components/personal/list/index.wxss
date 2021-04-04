@@ -1,0 +1,49 @@
+.content-item, .content-container{
+	background: #FFF;
+	box-sizing: border-box;
+}
+
+.content-container{
+	width: calc(100% - 40rpx);
+	margin: 10rpx 20rpx;
+	border-radius: 5rpx;
+	padding: 0px 20rpx;
+	background: #FFF;
+	box-sizing: border-box;
+}
+
+.content-item{
+	padding: 20rpx 0px;
+	border-bottom: 1px solid #EEE;
+	font-size: 32rpx;
+}
+
+.icon{
+	width: 50rpx;
+	margin-right: 20rpx;
+}
+
+.more{
+	width: 18rpx;
+}
+
+
+/* 公用样式 */
+.flex-col{
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.flex-space{
+	justify-content: space-between;
+}
+
+.flex-center{
+	align-items: center;
+}
+
+.flex-grow{
+	flex: 1;
+	padding: 0rpx 10rpx;
+}

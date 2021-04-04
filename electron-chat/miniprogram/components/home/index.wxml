@@ -1,0 +1,4 @@
+<scroll-view scroll-y="true" scroll-with-animation="{{true}}" class="container">
+	首页
+</scroll-view>
+

@@ -1,0 +1,118 @@
+<view>
+	<view  class="content" bindtouchstart="hideEmoji">
+		<scroll-view class="msg-list" scroll-y="true" scroll-with-animation="{{scrollAnimation}}" scroll-top="{{scrollTop}}" scroll-into-view="{{scrollToView}}">
+			<block wx:for="{{msgList}}" wx:for-item="row" wx:for-index="index" wx:key="index">
+				<view class="row" id="{{'msg'+row.id}}">
+					<block wx:if="{{row.uid==myuid}}">
+						<view class="my">
+							<view class="left">
+								<block wx:if="{{row.type=='text'}}">
+									<view class="bubble">
+										<rich-text nodes="{{row.msg.content}}"></rich-text>
+									</view>
+								</block>
+								
+								<block wx:if="{{row.type=='voice'}}">
+									<view class="{{['bubble voice',playMsgid==row.id?'play':'']}}" bindtap="playVoice" data-id="{{row.id}}"  data-url="{{row.msg.url}}">
+										<view class="length">{{row.msg.length}}</view>
+										<view class="icon my-voice"></view>
+									</view>
+								</block>
+								
+								<block wx:if="{{row.type=='img'}}">
+									<view  class="bubble img" bindtap="showPic" data-url="{{row.msg.url}}">
+										<image style="{{'width:'+(row.msg.w+'px')+';'+('height:'+(row.msg.h+'px')+';')}}" src="{{row.msg.url}}" />
+									</view>
+								</block>
+							</view>
+							
+							<view class="right">
+								<image src="{{userInfo.avatarUrl}}"></image>
+							</view>
+						</view>
+					</block>
+					
+					
+					<block wx:if="{{row.uid!=myuid}}">
+						<view class="other">
+							<view class="left">
+								<image src="{{targetUserInfo.face}}" />
+							</view>
+							<view class="right">
+								<!-- <view class="username">
+									<view class="name">{{targetUserInfo.username}}</view>
+									<view class="time">{{row.time}}</view>
+								</view> -->
+								<block wx:if="{{row.type=='text'}}">
+									<view class="bubble">
+										<rich-text nodes="{{row.msg.content}}"></rich-text>
+									</view>
+								</block>
+								<block wx:if="{{row.type=='voice'}}">
+									<view  class="{{['bubble voice',playMsgid==row.id?'play':'']}}" bindtap="playVoice" data-id="{{row.id}}"  data-url="{{row.msg.url}}">
+										<view class="icon other-voice"></view>
+										<view class="length">{{row.msg.length}}</view>
+									</view>
+								</block>
+								<block wx:if="{{row.type=='img'}}">
+									<view  class="bubble img" bindtap="showPic" data-url="{{row.msg.url}}">
+										<image style="{{'width:'+(row.msg.w+'px')+';'+('height:'+(row.msg.h+'px')+';')}}" src="{{row.msg.url}}" />
+									</view>
+								</block>
+							</view>
+						</view>
+					</block>
+				</view>
+			</block>
+		</scroll-view>
+	</view>
+	
+	<view  class="emoji-box {{showEmji == 'showEmoji' ? 'showEmoji' : 'hideEmoji'}}" catchtouchmove="discard">
+		<swiper class="swiper" indicator-dots="true" duration="150">
+			<block wx:for="{{emojiList}}" wx:for-item="page" wx:for-index="pid" wx:key="pid">
+				<swiper-item>
+					<block wx:for="{{page}}" wx:for-item="em" wx:for-index="eid" wx:key="eid">
+						<view bindtap="addEmoji" data-alt="{{em.alt}}">
+							<image mode="widthFix" src="{{'/static/img/emoji/'+em.url}}"></image>
+						</view>
+					</block>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+	
+	<view  class="input-box {{showEmji == 'showEmoji' ? 'showEmoji' : 'hideEmoji'}}" catchtouchmove="discard">
+		<view class="voice">
+			<view class="{{['icon',isVoice?'jianpan':'yuyin']}}" bindtap="switchVoice"></view>
+		</view>
+		<view class="textbox"><view class="{{['voice-mode',isVoice?'':'hidden',recording?'recording':'']}}" bindtouchstart="voiceBegin" catchtouchmove="voiceIng" bindtouchend="voiceEnd" bindtouchcancel="voiceCancel">{{voiceTis}}</view>
+			<view class="{{['text-mode',isVoice?'hidden':'']}}">
+				<view class="box">
+				<textarea auto-height="true" id="textMsg" value="{{textMsg}}" bindinput="textMsgInput"></textarea>
+			</view>
+			<view class="em" bindtap="chooseEmoji">
+				<view class="icon biaoqing"></view>
+			</view>
+		</view>
+	</view>
+
+	<view class="more" bindtap="chooseImage">
+		<view class="icon tupian"></view>
+	</view>
+		<label for="textMsg">
+			<view class="{{['send',isVoice?'hidden':'']}}" bindtap="sendText">
+				<view class="btn">发送</view>
+			</view>
+		</label>
+	</view>
+	
+	<view class="{{['record',recording?'':'hidden']}}">
+		<view class="{{['ing',willStop?'hidden':'']}}">
+			<view class="icon luyin2"></view>
+		</view>
+		<view class="{{['cancel',willStop?'':'hidden']}}">
+			<view class="icon chehui"></view>
+		</view>
+		<view class="{{['tis',willStop?'change':'']}}">{{recordTis}}</view>
+	</view>
+</view>

@@ -1,0 +1,13 @@
+<scroll-view scroll-y="true" scroll-with-animation="{{true}}" class="container">
+	<view class="header-container">
+		<view class="user-container  flex-col flex-center">
+			<image src="{{avatarUrl}}" class="user_pic" catchtap="myInfo"></image>
+			<view class="user_nickname  flex-grow_1">
+			  <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="loginAuth">登录</button>
+			  <text wx:if="{{!canIUse}}">{{username}}</text>
+			</view>
+		</view>
+	</view>
+	<normal bind:look="look"></normal>
+</scroll-view>
+

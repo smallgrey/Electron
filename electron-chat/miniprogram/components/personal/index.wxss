@@ -1,0 +1,69 @@
+.container{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: #EEE;
+}
+
+.header-container, .user-container{
+	width: 100%;
+	background: #FFF;
+	box-sizing: border-box;
+}
+
+.header-container{
+	padding: 20rpx 20rpx;
+}
+
+.header-container, .user_nickname{
+	box-sizing: border-box;
+}
+
+.user-container{
+	height: 150rpx;
+}
+
+.loginAuth{
+	background-color: transparent;
+	display: inline;
+}
+
+.user_pic{
+	width: 120rpx;
+	height: 120rpx;
+	border-radius: 120rpx;
+}
+.user_nickname{
+	padding: 20rpx;
+}
+
+/* 公共样式 */
+.flex-col{
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.flex-row{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.flex-center{
+	align-items: center;
+}
+.flex-space{
+	justify-content: space-between;
+}
+.flex-content-space{
+	justify-content: center;
+}
+.flex-grow_1{
+	overflow: scroll;
+}
+.flex-grow{
+	flex: 1;
+	overflow: scroll;
+}

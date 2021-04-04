@@ -1,0 +1,9 @@
+<view class="flex-row container">
+	<view class="content-container flex-grow">
+		<chatHistory wx:if="{{tabbarIndex == 0}}" chatList="{{chatList}}" bind:clearUnread="clearUnread">tab2内容</chatHistory>
+		<personal  wx:if="{{tabbarIndex == 1}}"></personal>
+	</view>
+	<view class="foot-container">
+		<mp-tabbar ext-class="foot-tabbar" list="{{list}}" data-tabbarIndex="index" bindchange="tabChange"></mp-tabbar>
+	</view>
+</view>

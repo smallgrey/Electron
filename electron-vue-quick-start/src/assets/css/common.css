@@ -1,0 +1,167 @@
+.el-input__inner {
+  border: 0px;
+  border-bottom: 1px solid #dddddd;
+  padding: 0px;
+  border-radius: 0px;
+  height: 32px;
+}
+
+.el-input.is-active .el-input__inner,
+.el-input__inner:focus {
+  border-bottom: 1px solid #dddddd !important;
+  border-radius: 0px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Microsoft YaHei;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+}
+#app {
+  width: 100%;
+  height: 100%;
+}
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+  width: 8px;
+  height: 0px;
+  background-color: rgba(221, 221, 221, 0.5);
+}
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 1);
+  border-radius: 1px;
+  background-color: rgba(255, 255, 255, 1);
+}
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: 1px;
+  -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0);
+  background-color: rgba(221, 221, 221, 0.5);
+}
+/*滑块效果*/
+::-webkit-scrollbar-thumb:hover {
+  border-radius: 1px;
+  -webkit-box-shadow: inset 0 0 5px rgba(255, 255, 255, 0);
+  background: rgba(221, 221, 221, 0.8);
+}
+
+.el-submenu__title {
+  min-width: 180px;
+}
+
+.el-upload,
+.el-upload-dragger {
+  width: 118px !important;
+  height: 68px !important;
+}
+.el-upload-list--picture-card .el-upload-list__item-actions {
+  width: 118px !important;
+  height: 68px !important;
+}
+.el-upload-list--picture-card .el-upload-list__item-thumbnail {
+  width: 118px !important;
+  height: 68px !important;
+}
+.el-upload-list--picture-card .el-upload-list__item {
+  width: 118px !important;
+  height: 68px !important;
+}
+.el-dialog__body {
+  padding: 10px 20px;
+}
+.el-message-box.message-logout {
+  width: 250px;
+}
+.el-message-box__wrapper > .el-message-box {
+  width: 270px;
+  min-height: 136px;
+}
+.el-message-box__wrapper .el-message-box.login-out-box .el-message-box__status {
+  color: #f67979;
+}
+.el-message-box__wrapper .el-message-box.login-out-box .login-out-cancel-btn {
+  color: #ccc;
+  border-color: #ccc;
+}
+.el-message-box__wrapper
+  .el-message-box.login-out-box
+  .el-message-box__message
+  p {
+  color: #000;
+}
+.el-button--small,
+.el-button--small.is-round {
+  padding: 0;
+  width: 60px;
+  height: 26px;
+  border-radius: 2px;
+}
+.el-button--small span {
+  font-size: 12px;
+}
+.el-message-box__btns {
+  padding: 15px 15px 5px;
+}
+.el-message-box.message-logotips {
+  width: 250px !important;
+  height: 130px !important;
+  margin-top: 50px !important;
+}
+
+.el-dropdown-menu.el-popper .el-dropdown-menu__item {
+  font-size: 12px;
+}
+.el-message-box__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -z-index: 2100 !important;
+}
+/* .el-select-dropdown {
+  z-index: 2200 !important;
+} */
+.el-select-dropdown__wrap {
+  max-height: 160px;
+}
+.el-popper[x-placement^='bottom'] {
+  margin-top: 10px;
+}
+.time-select .el-picker-panel__content {
+  max-height: 160px;
+}
+* {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.el-icon-video-camera:before {
+  cursor: default;
+}
+span.el-radio-button__inner {
+  font-size: 12px;
+}
+.el-select-dropdown__item span {
+  font-size: 12px;
+  color: #333;
+}
+.el-popper[x-placement^='bottom'] .popper__arrow {
+  display: none;
+}
+.el-dialog__wrapper {
+  -z-index: 2100 !important;
+}
+img {
+  -webkit-user-drag: none;
+}

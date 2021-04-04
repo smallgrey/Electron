@@ -1,0 +1,34 @@
+.container{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: #EEE;
+}
+
+/* 公共样式 */
+.flex-col{
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.flex-row{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.flex-center{
+	align-items: center;
+}
+.flex-space{
+	justify-content: space-between;
+}
+.flex-content-space{
+	justify-content: center;
+}
+.flex-grow{
+	flex: 1;
+	overflow: scroll;
+}

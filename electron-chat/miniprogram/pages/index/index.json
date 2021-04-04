@@ -1,0 +1,9 @@
+{
+	"navigationBarTitleText": "消息列表",
+	"usingComponents": {
+	   "mp-tabbar": "/miniprogram_npm/weui-miniprogram/tabbar/tabbar",
+	   "personal": "/components/personal/index",
+	   "home": "/components/home/index",
+	   "chatHistory": "/components/chat/index"
+	}
+}

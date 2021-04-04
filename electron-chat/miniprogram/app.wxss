@@ -1,0 +1,9 @@
+@import './miniprogram_npm/weui-miniprogram/weui-wxss/dist/style/weui.wxss';
+@import './common/main.wxss';
+
+[data-custom-hidden="true"],[bind-data-custom-hidden="true"]{display: none !important;}
+page{
+	font-size: 28rpx;
+	line-height: 40rpx;
+	color: #333;
+}

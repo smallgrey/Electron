@@ -1,0 +1,7 @@
+<view class="content-container">
+	<view class="content-item flex-col flex-center" wx:for="{{tabs}}"  wx:key="index"  catchtap="look" data-type="{{item.type}}">
+		<mp-icon icon="{{item.icon}}" color="{{item.color}}" size="{{25}}"></mp-icon>
+		<view class="flex-grow">{{item.title}}</view>
+		<image src="/images/common/more.png" class="more" mode="widthFix"></image>
+	</view>
+</view>
